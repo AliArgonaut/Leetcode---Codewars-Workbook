@@ -1,9 +1,10 @@
 var twoSum = function(nums, target) {
-    let current = 0;
-    for (x = 1; x < nums.length; x++){
-        if (parseInt(nums[current]) + parseInt(nums[x]) == target){
-            return current, x
+    for (y = 0; y < nums.length; y++){
+        const current = nums[y]
+        for (x = y+1; x < nums.length; x++){
+            if (current + nums[x] === target){
+                return [y, x]
+            }
         }
-        
     }
-};
+ };
